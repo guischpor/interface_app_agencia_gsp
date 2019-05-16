@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:ui_app_teste/styles/styles.dart';
 import 'package:ui_app_teste/widgets/home/build_drawer.dart';
+import 'package:ui_app_teste/widgets/home/menu_item.dart';
 
 class HomeScreen extends StatefulWidget {
   @override
@@ -19,7 +20,21 @@ class _HomeScreenState extends State<HomeScreen> {
         backgroundColor: style.backgroundApp,
       ),
       drawer: BuildDrawer(),
-      body: Container(),
+      body: ListView(
+        padding: EdgeInsets.symmetric(horizontal: 8.0),
+        children: <Widget>[
+          SizedBox(
+            height: 32,
+          ),
+          MenuItem(
+            icon: Icons.format_list_bulleted,
+            function: _routeListContact,
+            title: 'Lista de Contatos',
+          )
+        ],
+      ),
     );
   }
+
+  void _routeListContact() async {}
 }

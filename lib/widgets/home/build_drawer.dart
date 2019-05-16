@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:ui_app_teste/screens/home_screen.dart';
+import 'package:ui_app_teste/screens/login_screen.dart';
 import 'package:ui_app_teste/styles/styles.dart';
+import 'package:ui_app_teste/widgets/home/tiles_drawer.dart';
 
 import 'build_info.dart';
 
@@ -23,8 +26,34 @@ class _BuildDrawerState extends State<BuildDrawer> {
             margin: EdgeInsets.zero,
             padding: EdgeInsets.zero,
             child: BuildInfo(),
-          )
+          ),
+          TilesDrawer(
+            icon: Icons.home,
+            title: 'Home',
+            function: _routeHome,
+          ),
+          TilesDrawer(
+            icon: Icons.exit_to_app,
+            title: 'Sair',
+            function: _routeExit,
+          ),
         ],
+      ),
+    );
+  }
+
+  void _routeHome() async {
+    Navigator.of(context).push(
+      MaterialPageRoute(
+        builder: (context) => HomeScreen(),
+      ),
+    );
+  }
+
+  void _routeExit() async {
+    Navigator.of(context).pushReplacement(
+      MaterialPageRoute(
+        builder: (context) => LoginScreen(),
       ),
     );
   }
