@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ui_app_teste/styles/styles.dart';
+import 'package:ui_app_teste/widgets/home/build_drawer.dart';
 
 class HomeScreen extends StatefulWidget {
   @override
@@ -17,6 +18,8 @@ class _HomeScreenState extends State<HomeScreen> {
         centerTitle: true,
         backgroundColor: style.backgroundApp,
       ),
+      drawer: BuildDrawer(),
+      body: Container(),
     );
   }
 }
