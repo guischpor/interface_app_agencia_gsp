@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
-import 'package:ui_app_teste/screens/home_screen.dart';
 import 'package:ui_app_teste/styles/styles.dart';
 
 class BuildSigInButton extends StatelessWidget {
@@ -17,13 +16,7 @@ class BuildSigInButton extends StatelessWidget {
       child: RaisedButton(
         color: style.colorButtonSignInUp,
         textColor: Colors.white,
-        onPressed: () {
-          Navigator.of(context).pushReplacement(
-            MaterialPageRoute(
-              builder: (context) => HomeScreen(),
-            ),
-          );
-        },
+        onPressed: () {},
         child: Text(
           title,
           style: TextStyle(

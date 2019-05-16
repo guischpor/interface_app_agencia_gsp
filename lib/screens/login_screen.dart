@@ -20,7 +20,7 @@ class _LoginScreenState extends State<LoginScreen> {
         padding: EdgeInsets.all(16),
         children: <Widget>[
           Container(
-            padding: EdgeInsets.only(top: 50, bottom: 70),
+            padding: EdgeInsets.only(top: 50, bottom: 50),
             child: Icon(
               Icons.monetization_on,
               color: Colors.white,
