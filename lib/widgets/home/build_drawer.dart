@@ -33,6 +33,16 @@ class _BuildDrawerState extends State<BuildDrawer> {
             function: _routeHome,
           ),
           TilesDrawer(
+            icon: Icons.supervisor_account,
+            title: 'Lista de Contatos',
+            function: _routeListContact,
+          ),
+          TilesDrawer(
+            icon: Icons.monetization_on,
+            title: 'Pagamentos',
+            function: _routePayments,
+          ),
+          TilesDrawer(
             icon: Icons.exit_to_app,
             title: 'Sair',
             function: _routeExit,
@@ -49,6 +59,10 @@ class _BuildDrawerState extends State<BuildDrawer> {
       ),
     );
   }
+
+  void _routeListContact() async {}
+
+  void _routePayments() async {}
 
   void _routeExit() async {
     Navigator.of(context).pushReplacement(

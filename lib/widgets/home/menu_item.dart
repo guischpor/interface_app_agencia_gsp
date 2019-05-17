@@ -19,6 +19,7 @@ class MenuItem extends StatelessWidget {
     return InkWell(
       onTap: function,
       child: Card(
+        color: style.backgroundApp,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.all(
             Radius.circular(
@@ -35,8 +36,9 @@ class MenuItem extends StatelessWidget {
               decoration: BoxDecoration(
                 color: style.backgroundApp,
                 borderRadius: BorderRadius.only(
-                    bottomLeft: Radius.circular(12.0),
-                    topLeft: Radius.circular(12.0)),
+                  bottomLeft: Radius.circular(12.0),
+                  topLeft: Radius.circular(12.0),
+                ),
               ),
               child: Center(
                 child: Icon(
@@ -52,9 +54,9 @@ class MenuItem extends StatelessWidget {
             Text(
               title,
               style: TextStyle(
-                fontSize: 14,
-                fontWeight: FontWeight.w600,
-              ),
+                  fontSize: 16,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.white),
             )
           ],
         ),

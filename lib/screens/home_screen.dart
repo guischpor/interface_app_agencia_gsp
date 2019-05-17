@@ -24,17 +24,24 @@ class _HomeScreenState extends State<HomeScreen> {
         padding: EdgeInsets.symmetric(horizontal: 8.0),
         children: <Widget>[
           SizedBox(
-            height: 32,
+            height: 16,
           ),
           MenuItem(
-            icon: Icons.format_list_bulleted,
+            icon: Icons.supervisor_account,
             function: _routeListContact,
             title: 'Lista de Contatos',
-          )
+          ),
+          MenuItem(
+            icon: Icons.monetization_on,
+            function: _routePayments,
+            title: 'Pagamentos',
+          ),
         ],
       ),
     );
   }
 
   void _routeListContact() async {}
+
+  void _routePayments() async {}
 }
