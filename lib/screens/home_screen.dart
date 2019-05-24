@@ -31,67 +31,7 @@ class _HomeScreenState extends State<HomeScreen> {
           SizedBox(
             height: 32,
           ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: <Widget>[
-              MenuItem(
-                icon: Icons.supervisor_account,
-                function: _routeClient,
-                title: 'Clientes',
-                color: Colors.purpleAccent,
-              ),
-              MenuItem(
-                icon: Icons.description,
-                function: _routeOrcamento,
-                title: 'Orçamentos',
-                color: Colors.orangeAccent,
-              ),
-              MenuItem(
-                icon: Icons.attach_money,
-                function: _routeFinanceiro,
-                title: 'Financeiro',
-                color: Colors.lightBlueAccent,
-              ),
-              MenuItem(
-                icon: Icons.note,
-                function: _routeNotaFiscal,
-                title: 'Nota Fiscal',
-                color: Colors.greenAccent,
-              ),
-            ],
-          ),
-          SizedBox(
-            height: 32,
-          ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: <Widget>[
-              MenuItem(
-                icon: Icons.person_add,
-                function: _routeCadCliente,
-                title: 'Cadastrar Cliente',
-                color: Colors.deepPurple,
-              ),
-              MenuItem(
-                icon: Icons.monetization_on,
-                function: _routePayments,
-                title: 'Pagamentos',
-                color: Colors.redAccent,
-              ),
-              MenuItem(
-                icon: Icons.description,
-                function: _routePayments,
-                title: 'Orçamentos',
-                color: Colors.orangeAccent,
-              ),
-              MenuItem(
-                icon: Icons.attach_money,
-                function: _routePayments,
-                title: 'Financeiro',
-                color: Colors.lightBlueAccent,
-              ),
-            ],
-          )
+          MenuItems2()
         ],
       ),
     );

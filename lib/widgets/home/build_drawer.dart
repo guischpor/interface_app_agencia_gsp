@@ -34,12 +34,32 @@ class _BuildDrawerState extends State<BuildDrawer> {
           ),
           TilesDrawer(
             icon: Icons.supervisor_account,
-            title: 'Lista de Contatos',
+            title: 'Clientes',
             function: _routeListContact,
           ),
           TilesDrawer(
-            icon: Icons.monetization_on,
-            title: 'Pagamentos',
+            icon: Icons.person_add,
+            title: 'Cadastrar Clientes',
+            function: _routePayments,
+          ),
+          TilesDrawer(
+            icon: Icons.description,
+            title: 'Orçamentos',
+            function: _routePayments,
+          ),
+          TilesDrawer(
+            icon: Icons.attach_money,
+            title: 'Financeiro',
+            function: _routePayments,
+          ),
+          TilesDrawer(
+            icon: Icons.note,
+            title: 'Nota Fiscal',
+            function: _routePayments,
+          ),
+          TilesDrawer(
+            icon: Icons.insert_drive_file,
+            title: 'Contratos',
             function: _routePayments,
           ),
           TilesDrawer(
