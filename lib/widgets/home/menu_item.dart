@@ -1,61 +1,67 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:ui_app_teste/screens/client_screen.dart';
 
-class MenuItems2 extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return GridView.count(
-      shrinkWrap: true,
-      crossAxisCount: 5,
-      children: menuIcon,
-    );
-  }
-}
+// class MenuItems2 extends StatefulWidget {
+//   @override
+//   _MenuItems2State createState() => _MenuItems2State();
+// }
 
-List<MenuIcon> menuIcon = [
-  MenuIcon(
-    title: 'Clientes',
-    icon: Icons.supervisor_account,
-    color: Colors.purpleAccent,
-    iconColor: Colors.white,
-    function: () {},
-  ),
-  MenuIcon(
-    title: 'Cadastrar Clientes',
-    icon: Icons.person_add,
-    color: Colors.deepPurpleAccent,
-    iconColor: Colors.white,
-    function: () {},
-  ),
-  MenuIcon(
-    title: 'Orçamentos',
-    icon: Icons.description,
-    color: Colors.orangeAccent,
-    iconColor: Colors.white,
-    function: () {},
-  ),
-  MenuIcon(
-    title: 'Financeiro',
-    icon: Icons.attach_money,
-    color: Colors.lightBlueAccent,
-    iconColor: Colors.white,
-    function: () {},
-  ),
-  MenuIcon(
-    title: 'Nota Fiscal',
-    icon: Icons.note,
-    color: Colors.greenAccent,
-    iconColor: Colors.white,
-    function: () {},
-  ),
-  MenuIcon(
-    title: 'Contratos',
-    icon: Icons.insert_drive_file,
-    color: Colors.blue[700],
-    iconColor: Colors.white,
-    function: () {},
-  ),
-];
+// class _MenuItems2State extends State<MenuItems2> {
+//   @override
+//   Widget build(BuildContext context) {
+//     return GridView.count(
+//       shrinkWrap: true,
+//       crossAxisCount: 5,
+//       //children: menuIcon,
+//     );
+//   }
+// }
+
+// List<MenuIcon> menuIcon = [
+//   MenuIcon(
+//     title: 'Clientes',
+//     icon: Icons.supervisor_account,
+//     color: Colors.purpleAccent,
+//     iconColor: Colors.white,
+//     function: () {},
+//   ),
+//   MenuIcon(
+//     title: 'Cadastrar Clientes',
+//     icon: Icons.person_add,
+//     color: Colors.deepPurpleAccent,
+//     iconColor: Colors.white,
+//     function: () {},
+//   ),
+//   MenuIcon(
+//     title: 'Orçamentos',
+//     icon: Icons.description,
+//     color: Colors.orangeAccent,
+//     iconColor: Colors.white,
+//     function: () {},
+//   ),
+//   MenuIcon(
+//     title: 'Financeiro',
+//     icon: Icons.attach_money,
+//     color: Colors.lightBlueAccent,
+//     iconColor: Colors.white,
+//     function: () {},
+//   ),
+//   MenuIcon(
+//     title: 'Nota Fiscal',
+//     icon: Icons.note,
+//     color: Colors.greenAccent,
+//     iconColor: Colors.white,
+//     function: () {},
+//   ),
+//   MenuIcon(
+//     title: 'Contratos',
+//     icon: Icons.insert_drive_file,
+//     color: Colors.blue[700],
+//     iconColor: Colors.white,
+//     function: () {},
+//   ),
+// ];
 
 class MenuIcon extends StatelessWidget {
   final String title;
@@ -64,7 +70,13 @@ class MenuIcon extends StatelessWidget {
   final Color iconColor;
   final Function function;
 
-  MenuIcon({this.title, this.icon, this.color, this.iconColor, this.function});
+  MenuIcon({
+    this.title,
+    this.icon,
+    this.color,
+    this.iconColor,
+    this.function,
+  });
   @override
   Widget build(BuildContext context) {
     return GestureDetector(

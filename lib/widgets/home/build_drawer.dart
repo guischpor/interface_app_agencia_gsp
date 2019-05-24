@@ -1,6 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:ui_app_teste/screens/cad_client_screen.dart';
+import 'package:ui_app_teste/screens/client_screen.dart';
+import 'package:ui_app_teste/screens/contrato_screen.dart';
+import 'package:ui_app_teste/screens/finan_screen.dart';
 import 'package:ui_app_teste/screens/home_screen.dart';
 import 'package:ui_app_teste/screens/login_screen.dart';
+import 'package:ui_app_teste/screens/nota_fical_screen.dart';
+import 'package:ui_app_teste/screens/orcamento_screen.dart';
 import 'package:ui_app_teste/styles/styles.dart';
 import 'package:ui_app_teste/widgets/home/tiles_drawer.dart';
 
@@ -35,32 +41,32 @@ class _BuildDrawerState extends State<BuildDrawer> {
           TilesDrawer(
             icon: Icons.supervisor_account,
             title: 'Clientes',
-            function: _routeListContact,
+            function: _routeClient,
           ),
           TilesDrawer(
             icon: Icons.person_add,
             title: 'Cadastrar Clientes',
-            function: _routePayments,
+            function: _routeCadCliente,
           ),
           TilesDrawer(
             icon: Icons.description,
             title: 'Orçamentos',
-            function: _routePayments,
+            function: _routeOrcamento,
           ),
           TilesDrawer(
             icon: Icons.attach_money,
             title: 'Financeiro',
-            function: _routePayments,
+            function: _routeFinanceiro,
           ),
           TilesDrawer(
             icon: Icons.note,
             title: 'Nota Fiscal',
-            function: _routePayments,
+            function: _routeNotaFiscal,
           ),
           TilesDrawer(
             icon: Icons.insert_drive_file,
             title: 'Contratos',
-            function: _routePayments,
+            function: _routeContrato,
           ),
           TilesDrawer(
             icon: Icons.exit_to_app,
@@ -80,9 +86,53 @@ class _BuildDrawerState extends State<BuildDrawer> {
     );
   }
 
-  void _routeListContact() async {}
+  void _routeClient() async {
+    Navigator.of(context).push(
+      MaterialPageRoute(
+        builder: (context) => ClientScreen(),
+      ),
+    );
+  }
 
-  void _routePayments() async {}
+  void _routeOrcamento() async {
+    Navigator.of(context).push(
+      MaterialPageRoute(
+        builder: (context) => OrcamentoScreen(),
+      ),
+    );
+  }
+
+  void _routeFinanceiro() async {
+    Navigator.of(context).push(
+      MaterialPageRoute(
+        builder: (context) => FinanScreen(),
+      ),
+    );
+  }
+
+  void _routeNotaFiscal() async {
+    Navigator.of(context).push(
+      MaterialPageRoute(
+        builder: (context) => NotaFiscalScreen(),
+      ),
+    );
+  }
+
+  void _routeCadCliente() async {
+    Navigator.of(context).push(
+      MaterialPageRoute(
+        builder: (context) => CadClienteScreen(),
+      ),
+    );
+  }
+
+  void _routeContrato() async {
+    Navigator.of(context).push(
+      MaterialPageRoute(
+        builder: (context) => ContratoScreen(),
+      ),
+    );
+  }
 
   void _routeExit() async {
     Navigator.of(context).pushReplacement(
