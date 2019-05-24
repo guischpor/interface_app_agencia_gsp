@@ -20,13 +20,26 @@ class _LoginScreenState extends State<LoginScreen> {
         child: ListView(
           padding: EdgeInsets.all(16),
           children: <Widget>[
+            // Container(
+            //   padding: EdgeInsets.only(top: 20, bottom: 20),
+            //   child: Icon(
+            //     Icons.store_mall_directory,
+            //     size: 180,
+            //     color: Colors.white,
+            //   ),
+            // ),
+            SizedBox(
+              height: 40,
+            ),
             Container(
-              padding: EdgeInsets.only(top: 50, bottom: 50),
-              child: Icon(
-                Icons.store_mall_directory,
-                size: 180,
-                color: Colors.white,
+              height: 200,
+              child: Image(
+                image: AssetImage('images/logo2.png'),
+                //width: 20,
               ),
+            ),
+            SizedBox(
+              height: 60,
             ),
             FormContainer(),
             SignInButton()

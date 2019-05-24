@@ -9,11 +9,12 @@ class InputField extends StatelessWidget {
   InputField(
       {@required this.hint, @required this.icon, @required this.obscure});
 
-  Styles style = Styles();
+  final style = Styles();
 
   @override
   Widget build(BuildContext context) {
     return Container(
+      width: 500,
       padding: EdgeInsets.all(8),
       decoration: BoxDecoration(
         color: Colors.white,
