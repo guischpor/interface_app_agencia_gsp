@@ -11,12 +11,12 @@ class SignInButton extends StatelessWidget {
           height: 40,
         ),
         BuildSigInButton(
-          title: 'Sign In',
+          title: 'Entrar',
         ),
         SizedBox(
           height: 40,
         ),
-        RegisterButton( title: 'Não possui uma conta? Cadastre-se',)
+        //RegisterButton( title: 'Não possui uma conta? Cadastre-se',)
       ],
     );
   }

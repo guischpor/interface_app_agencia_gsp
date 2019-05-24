@@ -16,20 +16,22 @@ class _LoginScreenState extends State<LoginScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: style.backgroundApp,
-      body: ListView(
-        padding: EdgeInsets.all(16),
-        children: <Widget>[
-          Container(
-            padding: EdgeInsets.only(top: 50, bottom: 50),
-            child: Icon(
-              Icons.monetization_on,
-              color: Colors.white,
-              size: 140,
+      body: SafeArea(
+        child: ListView(
+          padding: EdgeInsets.all(16),
+          children: <Widget>[
+            Container(
+              padding: EdgeInsets.only(top: 50, bottom: 50),
+              child: Icon(
+                Icons.store_mall_directory,
+                size: 180,
+                color: Colors.white,
+              ),
             ),
-          ),
-          FormContainer(),
-          SignInButton()
-        ],
+            FormContainer(),
+            SignInButton()
+          ],
+        ),
       ),
     );
   }

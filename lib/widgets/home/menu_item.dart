@@ -7,59 +7,52 @@ class MenuItem extends StatelessWidget {
   final String title;
   final Function function;
   final IconData icon;
+  final Color color;
 
-  MenuItem({
-    @required this.title,
-    @required this.function,
-    @required this.icon,
-  });
+  MenuItem(
+      {@required this.title,
+      @required this.function,
+      @required this.icon,
+      @required this.color});
 
   @override
   Widget build(BuildContext context) {
-    return InkWell(
+    return GestureDetector(
       onTap: function,
-      child: Card(
-        color: style.backgroundApp,
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.all(
-            Radius.circular(
-              12.0,
-            ),
-          ),
-        ),
-        elevation: 4,
-        child: Row(
-          children: <Widget>[
-            Container(
-              width: 80.0,
-              height: 80.0,
-              decoration: BoxDecoration(
-                color: style.backgroundApp,
-                borderRadius: BorderRadius.only(
-                  bottomLeft: Radius.circular(12.0),
-                  topLeft: Radius.circular(12.0),
+      child: Column(
+        children: <Widget>[
+          Padding(
+            padding: EdgeInsets.only(bottom: 20),
+            child: Column(
+              children: <Widget>[
+                Container(
+                  height: 80,
+                  width: 80,
+                  decoration: BoxDecoration(
+                    color: color,
+                    shape: BoxShape.circle,
+                  ),
+                  child: Icon(
+                    icon,
+                    color: Colors.white,
+                    size: 40,
+                  ),
                 ),
-              ),
-              child: Center(
-                child: Icon(
-                  icon,
-                  size: 48.0,
-                  color: Colors.white,
+                SizedBox(
+                  height: 10,
                 ),
-              ),
+                Text(
+                  title,
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontSize: 14,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ],
             ),
-            SizedBox(
-              width: 10.0,
-            ),
-            Text(
-              title,
-              style: TextStyle(
-                  fontSize: 16,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.white),
-            )
-          ],
-        ),
+          )
+        ],
       ),
     );
   }

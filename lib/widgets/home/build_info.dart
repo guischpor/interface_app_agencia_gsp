@@ -18,7 +18,7 @@ class BuildInfo extends StatelessWidget {
                   Radius.circular(80.0),
                 ),
                 image: DecorationImage(
-                  image: AssetImage('images/perfil.jpg'),
+                  image: AssetImage('images/perfil2.jpeg'),
                   fit: BoxFit.cover,
                 ),
                 border: Border.all(
@@ -34,17 +34,17 @@ class BuildInfo extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
                   Text(
-                    'Chris Evans',
+                    'Raissa Portela',
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 20,
                     ),
                   ),
                   Text(
-                    'CEO SYSTEMS',
+                    'GSP DESIGN',
                     style: TextStyle(
                       color: Colors.white,
-                      fontSize: 10,
+                      fontSize: 12,
                     ),
                   ),
                 ],

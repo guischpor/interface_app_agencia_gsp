@@ -18,7 +18,7 @@ class FormContainer extends StatelessWidget {
               height: 16.0,
             ),
             InputField(
-              hint: 'Password',
+              hint: 'Senha',
               icon: Icons.lock,
               obscure: true,
             ),
