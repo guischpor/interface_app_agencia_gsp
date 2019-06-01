@@ -20,19 +20,11 @@ class _LoginScreenState extends State<LoginScreen> {
         child: ListView(
           padding: EdgeInsets.all(16),
           children: <Widget>[
-            // Container(
-            //   padding: EdgeInsets.only(top: 20, bottom: 20),
-            //   child: Icon(
-            //     Icons.store_mall_directory,
-            //     size: 180,
-            //     color: Colors.white,
-            //   ),
-            // ),
             SizedBox(
               height: 40,
             ),
             Container(
-              height: 200,
+              height: 100,
               child: Image(
                 image: AssetImage('images/logo2.png'),
                 //width: 20,

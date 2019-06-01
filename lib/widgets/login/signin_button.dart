@@ -16,7 +16,9 @@ class SignInButton extends StatelessWidget {
         SizedBox(
           height: 40,
         ),
-        //RegisterButton( title: 'Não possui uma conta? Cadastre-se',)
+        RegisterButton(
+          title: 'Esqueceu a sua senha? Clique aqui!',
+        )
       ],
     );
   }

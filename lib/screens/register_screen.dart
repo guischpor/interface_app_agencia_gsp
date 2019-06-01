@@ -16,7 +16,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Sign Up'),
+        title: Text('Esqueceu a senha'),
         backgroundColor: style.backgroundApp,
         elevation: 0,
         centerTitle: true,

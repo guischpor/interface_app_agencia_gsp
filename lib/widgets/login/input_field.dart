@@ -14,7 +14,7 @@ class InputField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 500,
+      width: 350,
       padding: EdgeInsets.all(8),
       decoration: BoxDecoration(
         color: Colors.white,

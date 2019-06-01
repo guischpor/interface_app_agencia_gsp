@@ -13,7 +13,7 @@ class BuildSigInButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       height: 60,
-      width: 500,
+      width: 350,
       child: RaisedButton(
         color: style.colorButtonSignInUp,
         textColor: Colors.white,

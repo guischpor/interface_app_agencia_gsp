@@ -33,11 +33,11 @@ class _BuildDrawerState extends State<BuildDrawer> {
             padding: EdgeInsets.zero,
             child: BuildInfo(),
           ),
-          TilesDrawer(
-            icon: Icons.home,
-            title: 'Home',
-            function: _routeHome,
-          ),
+          // TilesDrawer(
+          //   icon: Icons.home,
+          //   title: 'Home',
+          //   function: _routeHome,
+          // ),
           TilesDrawer(
             icon: Icons.supervisor_account,
             title: 'Clientes',

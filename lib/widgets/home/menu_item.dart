@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:ui_app_teste/screens/client_screen.dart';
 
 // class MenuItems2 extends StatefulWidget {
 //   @override
@@ -84,8 +83,8 @@ class MenuIcon extends StatelessWidget {
       child: Column(
         children: <Widget>[
           Container(
-            height: 80,
-            width: 80,
+            height: 60,
+            width: 60,
             decoration: BoxDecoration(
               color: color,
               shape: BoxShape.circle,

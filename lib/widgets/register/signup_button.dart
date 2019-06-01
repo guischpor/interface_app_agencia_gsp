@@ -10,7 +10,7 @@ class SignUpButton extends StatelessWidget {
           height: 40,
         ),
         BuildSigInButton(
-          title: 'Sign Up',
+          title: 'Enviar',
         ),
       ],
     );

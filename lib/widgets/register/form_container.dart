@@ -9,14 +9,14 @@ class FormContainer extends StatelessWidget {
       child: Form(
         child: Column(
           children: <Widget>[
-            InputField(
-              hint: 'Username',
-              icon: Icons.person,
-              obscure: false,
-            ),
-            SizedBox(
-              height: 16.0,
-            ),
+            // InputField(
+            //   hint: 'Username',
+            //   icon: Icons.person,
+            //   obscure: false,
+            // ),
+            // SizedBox(
+            //   height: 16.0,
+            // ),
             InputField(
               hint: 'Email',
               icon: Icons.email,
@@ -25,11 +25,11 @@ class FormContainer extends StatelessWidget {
             SizedBox(
               height: 16.0,
             ),
-            InputField(
-              hint: 'Password',
-              icon: Icons.lock,
-              obscure: true,
-            ),
+            // InputField(
+            //   hint: 'Password',
+            //   icon: Icons.lock,
+            //   obscure: true,
+            // ),
           ],
         ),
       ),

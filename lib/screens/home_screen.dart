@@ -35,7 +35,7 @@ class _HomeScreenState extends State<HomeScreen> {
           //MenuItems2()
           GridView.count(
             shrinkWrap: true,
-            crossAxisCount: 5,
+            crossAxisCount: 3,
             //children: menuIcon,
             children: <Widget>[
               MenuIcon(
