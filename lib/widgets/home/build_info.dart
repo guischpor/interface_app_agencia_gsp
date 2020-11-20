@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:ui_app_teste/styles/styles.dart';
 
 class BuildInfo extends StatelessWidget {
+  Styles style = Styles();
+
   @override
   Widget build(BuildContext context) {
     return Center(
@@ -18,12 +21,12 @@ class BuildInfo extends StatelessWidget {
                   Radius.circular(80.0),
                 ),
                 image: DecorationImage(
-                  image: AssetImage('images/perfil2.jpeg'),
+                  image: AssetImage('images/perfil2.jpg'),
                   fit: BoxFit.cover,
                 ),
                 border: Border.all(
                   width: 3.0,
-                  color: Colors.white,
+                  color: style.colorInputTextOrange,
                 ),
               ),
             ),
@@ -43,7 +46,7 @@ class BuildInfo extends StatelessWidget {
                   Text(
                     'GSP DESIGN',
                     style: TextStyle(
-                      color: Colors.white,
+                      color: style.colorInputTextOrange,
                       fontSize: 12,
                     ),
                   ),

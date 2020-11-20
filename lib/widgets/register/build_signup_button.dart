@@ -14,7 +14,7 @@ class BuildSigInButton extends StatelessWidget {
       height: 60,
       width: 340,
       child: RaisedButton(
-        color: style.colorButtonSignInUp,
+        color: style.colorButtonSignInUpOrange,
         textColor: Colors.white,
         onPressed: () {},
         child: Text(

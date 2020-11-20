@@ -19,6 +19,7 @@ class BuildDrawer extends StatefulWidget {
 
 class _BuildDrawerState extends State<BuildDrawer> {
   Styles style = Styles();
+
   @override
   Widget build(BuildContext context) {
     return Drawer(
@@ -27,7 +28,7 @@ class _BuildDrawerState extends State<BuildDrawer> {
         children: <Widget>[
           DrawerHeader(
             decoration: BoxDecoration(
-              color: style.backgroundApp,
+              color: style.backgroundAppPurple,
             ),
             margin: EdgeInsets.zero,
             padding: EdgeInsets.zero,

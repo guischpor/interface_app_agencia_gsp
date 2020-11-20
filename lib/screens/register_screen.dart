@@ -17,11 +17,11 @@ class _RegisterScreenState extends State<RegisterScreen> {
     return Scaffold(
       appBar: AppBar(
         title: Text('Esqueceu a senha'),
-        backgroundColor: style.backgroundApp,
+        backgroundColor: style.backgroundAppPurple,
         elevation: 0,
         centerTitle: true,
       ),
-      backgroundColor: style.backgroundApp,
+      backgroundColor: style.backgroundAppPurple,
       body: ListView(
         padding: EdgeInsets.all(16),
         children: <Widget>[

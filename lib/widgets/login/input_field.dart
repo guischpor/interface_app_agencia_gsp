@@ -29,7 +29,7 @@ class InputField extends StatelessWidget {
       child: TextFormField(
         obscureText: obscure,
         style: TextStyle(
-          color: style.backgroundApp,
+          color: style.colorInputTextOrange,
         ),
         decoration: InputDecoration(
           icon: Icon(

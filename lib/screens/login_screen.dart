@@ -15,7 +15,7 @@ class _LoginScreenState extends State<LoginScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: style.backgroundApp,
+      backgroundColor: style.backgroundAppPurple,
       body: SafeArea(
         child: ListView(
           padding: EdgeInsets.all(16),
@@ -26,7 +26,7 @@ class _LoginScreenState extends State<LoginScreen> {
             Container(
               height: 100,
               child: Image(
-                image: AssetImage('images/logo2.png'),
+                image: AssetImage('images/logo.png'),
                 //width: 20,
               ),
             ),

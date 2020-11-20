@@ -15,7 +15,7 @@ class FormContainer extends StatelessWidget {
             InputField(
               hint: 'Email',
               icon: Icons.email,
-              iconColor: style.backgroundApp,
+              iconColor: style.iconColorOrange,
               obscure: false,
             ),
             SizedBox(
@@ -25,7 +25,7 @@ class FormContainer extends StatelessWidget {
               hint: 'Senha',
               icon: Icons.lock,
               obscure: true,
-              iconColor: style.backgroundApp,
+              iconColor: style.iconColorOrange,
             ),
           ],
         ),

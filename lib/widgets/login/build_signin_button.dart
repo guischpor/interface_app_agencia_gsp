@@ -15,7 +15,7 @@ class BuildSigInButton extends StatelessWidget {
       height: 60,
       width: 350,
       child: RaisedButton(
-        color: style.colorButtonSignInUp,
+        color: style.colorButtonSignInUpOrange,
         textColor: Colors.white,
         onPressed: () {
           Navigator.of(context).pushReplacement(

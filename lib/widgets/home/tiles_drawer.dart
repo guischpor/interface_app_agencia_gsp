@@ -18,12 +18,12 @@ class TilesDrawer extends StatelessWidget {
     return ListTile(
       leading: Icon(
         icon,
-        color: style.backgroundApp,
+        color: style.iconColorOrange,
       ),
       title: Text(
         title,
         style: TextStyle(
-          color: style.backgroundApp,
+          color: style.colorInputTextOrange,
           fontSize: 14,
           fontWeight: FontWeight.bold,
         ),

@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:ui_app_teste/widgets/register/input_field.dart';
+import 'package:ui_app_teste/styles/styles.dart';
 
 class FormContainer extends StatelessWidget {
+  Styles style = Styles();
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -9,27 +12,15 @@ class FormContainer extends StatelessWidget {
       child: Form(
         child: Column(
           children: <Widget>[
-            // InputField(
-            //   hint: 'Username',
-            //   icon: Icons.person,
-            //   obscure: false,
-            // ),
-            // SizedBox(
-            //   height: 16.0,
-            // ),
             InputField(
               hint: 'Email',
               icon: Icons.email,
               obscure: false,
+              iconColor: style.iconColorOrange,
             ),
             SizedBox(
               height: 16.0,
             ),
-            // InputField(
-            //   hint: 'Password',
-            //   icon: Icons.lock,
-            //   obscure: true,
-            // ),
           ],
         ),
       ),
