@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:ui_app_teste/widgets/login/input_field.dart';
+import 'package:ui_app_teste/styles/styles.dart';
 
 class FormContainer extends StatelessWidget {
+  Styles style = Styles();
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -12,6 +15,7 @@ class FormContainer extends StatelessWidget {
             InputField(
               hint: 'Email',
               icon: Icons.email,
+              iconColor: style.backgroundApp,
               obscure: false,
             ),
             SizedBox(
@@ -21,6 +25,7 @@ class FormContainer extends StatelessWidget {
               hint: 'Senha',
               icon: Icons.lock,
               obscure: true,
+              iconColor: style.backgroundApp,
             ),
           ],
         ),

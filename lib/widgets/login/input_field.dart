@@ -3,11 +3,15 @@ import 'package:ui_app_teste/styles/styles.dart';
 
 class InputField extends StatelessWidget {
   final IconData icon;
+  final Color iconColor;
   final String hint;
   final bool obscure;
 
   InputField(
-      {@required this.hint, @required this.icon, @required this.obscure});
+      {@required this.hint,
+      @required this.icon,
+      @required this.obscure,
+      @required this.iconColor});
 
   final style = Styles();
 
@@ -30,12 +34,12 @@ class InputField extends StatelessWidget {
         decoration: InputDecoration(
           icon: Icon(
             icon,
-            color: style.backgroundApp,
+            color: iconColor,
           ),
           border: InputBorder.none,
           hintText: hint,
           hintStyle: TextStyle(
-            color: style.backgroundApp,
+            color: iconColor,
             fontSize: 15.0,
             fontWeight: FontWeight.bold,
           ),
