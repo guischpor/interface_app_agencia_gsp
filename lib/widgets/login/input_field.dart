@@ -23,7 +23,7 @@ class InputField extends StatelessWidget {
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.all(
-          Radius.circular(20.0),
+          Radius.circular(10.0),
         ),
       ),
       child: TextFormField(
