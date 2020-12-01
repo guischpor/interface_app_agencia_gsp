@@ -1,8 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:ui_app_teste/widgets/login/custom_icon_button.dart';
 import 'package:ui_app_teste/widgets/login/input_field.dart';
 import 'package:ui_app_teste/styles/styles.dart';
 
-class FormContainer extends StatelessWidget {
+class FormContainer extends StatefulWidget {
+  @override
+  _FormContainerState createState() => _FormContainerState();
+}
+
+class _FormContainerState extends State<FormContainer> {
   Styles style = Styles();
 
   @override
@@ -14,18 +20,25 @@ class FormContainer extends StatelessWidget {
           children: <Widget>[
             InputField(
               hint: 'Email',
-              icon: Icons.email,
-              iconColor: style.iconColorOrange,
-              obscure: false,
+              prefix: Icon(Icons.email),
+              textInputType: TextInputType.emailAddress,
+              onChanged: (String value) => {},
+              enable: true,
             ),
             SizedBox(
               height: 16.0,
             ),
             InputField(
               hint: 'Senha',
-              icon: Icons.lock,
+              prefix: Icon(Icons.lock),
               obscure: true,
-              iconColor: style.iconColorOrange,
+              onChanged: (String value) => {},
+              enable: true,
+              suffix: CustomIconButton(
+                radius: 32,
+                iconData: Icons.visibility,
+                onTap: () => {},
+              ),
             ),
           ],
         ),

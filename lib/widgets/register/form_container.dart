@@ -14,9 +14,10 @@ class FormContainer extends StatelessWidget {
           children: <Widget>[
             InputField(
               hint: 'Email',
-              icon: Icons.email,
-              obscure: false,
-              iconColor: style.iconColorOrange,
+              prefix: Icon(Icons.email),
+              textInputType: TextInputType.emailAddress,
+              onChanged: (String value) => {},
+              enable: true,
             ),
             SizedBox(
               height: 16.0,

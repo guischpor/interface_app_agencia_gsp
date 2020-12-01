@@ -2,40 +2,55 @@ import 'package:flutter/material.dart';
 import 'package:ui_app_teste/styles/styles.dart';
 
 class InputField extends StatelessWidget {
-  final IconData icon;
-  final Color iconColor;
+  final TextEditingController controller;
   final String hint;
+  final IconData icon;
+  final Widget prefix;
+  final Widget suffix;
+  final Color iconColor;
   final bool obscure;
+  final TextInputType textInputType;
+  final Function(String) onChanged;
+  final bool enable;
 
   InputField(
-      {@required this.hint,
-      @required this.icon,
-      @required this.obscure,
-      @required this.iconColor});
+      {this.hint,
+      this.icon,
+      this.obscure = false,
+      this.iconColor,
+      this.prefix,
+      this.suffix,
+      this.textInputType,
+      this.onChanged,
+      this.enable,
+      this.controller});
 
   final style = Styles();
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 350,
       padding: EdgeInsets.all(8),
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.all(
-          Radius.circular(10.0),
+          Radius.circular(8.0),
         ),
       ),
-      child: TextFormField(
+      child: TextField(
         obscureText: obscure,
+        controller: controller,
+        keyboardType: textInputType,
+        onChanged: onChanged,
+        enabled: enable,
         style: TextStyle(
           color: style.colorInputTextOrange,
         ),
         decoration: InputDecoration(
-          icon: Icon(
-            icon,
-            color: iconColor,
-          ),
+          // icon: Icon(
+          //   icon,
+          //   color: iconColor,
+          // ),
           border: InputBorder.none,
           hintText: hint,
           hintStyle: TextStyle(
@@ -43,7 +58,10 @@ class InputField extends StatelessWidget {
             fontSize: 15.0,
             fontWeight: FontWeight.bold,
           ),
+          prefixIcon: prefix,
+          suffixIcon: suffix,
         ),
+        //textAlignVertical: TextAlignVertical.center,
       ),
     );
   }
