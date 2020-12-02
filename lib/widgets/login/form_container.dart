@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_mobx/flutter_mobx.dart';
+import 'package:mobx/mobx.dart';
+import 'package:ui_app_teste/stores/login_store.dart';
 import 'package:ui_app_teste/widgets/login/custom_icon_button.dart';
 import 'package:ui_app_teste/widgets/login/input_field.dart';
 import 'package:ui_app_teste/styles/styles.dart';
@@ -11,6 +14,8 @@ class FormContainer extends StatefulWidget {
 class _FormContainerState extends State<FormContainer> {
   Styles style = Styles();
 
+  LoginStore loginStore = LoginStore();
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -18,28 +23,32 @@ class _FormContainerState extends State<FormContainer> {
       child: Form(
         child: Column(
           children: <Widget>[
-            InputField(
-              hint: 'Email',
-              prefix: Icon(Icons.email),
-              textInputType: TextInputType.emailAddress,
-              onChanged: (String value) => {},
-              enable: true,
-            ),
+            Observer(builder: (_) {
+              return InputField(
+                hint: 'Email',
+                prefix: Icon(Icons.email),
+                textInputType: TextInputType.emailAddress,
+                onChanged: loginStore.setEmail,
+                enable: true,
+              );
+            }),
             SizedBox(
               height: 16.0,
             ),
-            InputField(
-              hint: 'Senha',
-              prefix: Icon(Icons.lock),
-              obscure: true,
-              onChanged: (String value) => {},
-              enable: true,
-              suffix: CustomIconButton(
-                radius: 32,
-                iconData: Icons.visibility,
-                onTap: () => {},
-              ),
-            ),
+            Observer(builder: (_) {
+              return InputField(
+                hint: 'Senha',
+                prefix: Icon(Icons.lock),
+                obscure: !loginStore.passwordVisible,
+                onChanged: loginStore.setPassword,
+                enable: true,
+                suffix: CustomIconButton(
+                  radius: 32,
+                  iconData: Icons.visibility,
+                  onTap: loginStore.togglePasswordVisibility,
+                ),
+              );
+            })
           ],
         ),
       ),
