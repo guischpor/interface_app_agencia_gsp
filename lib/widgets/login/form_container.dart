@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:mobx/mobx.dart';
+import 'package:provider/provider.dart';
 import 'package:ui_app_teste/stores/login_store.dart';
 import 'package:ui_app_teste/widgets/login/custom_icon_button.dart';
 import 'package:ui_app_teste/widgets/login/input_field.dart';
@@ -14,7 +15,17 @@ class FormContainer extends StatefulWidget {
 class _FormContainerState extends State<FormContainer> {
   Styles style = Styles();
 
-  LoginStore loginStore = LoginStore();
+  LoginStore loginStore;
+
+  ReactionDisposer disposer;
+
+  @override
+  void didChangeDependencies() {
+    // TODO: implement didChangeDependencies
+    super.didChangeDependencies();
+
+    loginStore = Provider.of<LoginStore>(context);
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -29,7 +40,7 @@ class _FormContainerState extends State<FormContainer> {
                 prefix: Icon(Icons.email),
                 textInputType: TextInputType.emailAddress,
                 onChanged: loginStore.setEmail,
-                enable: true,
+                enable: !loginStore.loading,
               );
             }),
             SizedBox(
@@ -41,10 +52,12 @@ class _FormContainerState extends State<FormContainer> {
                 prefix: Icon(Icons.lock),
                 obscure: !loginStore.passwordVisible,
                 onChanged: loginStore.setPassword,
-                enable: true,
+                enable: !loginStore.loading,
                 suffix: CustomIconButton(
                   radius: 32,
-                  iconData: Icons.visibility,
+                  iconData: loginStore.passwordVisible
+                      ? Icons.visibility_off
+                      : Icons.visibility,
                   onTap: loginStore.togglePasswordVisibility,
                 ),
               );
