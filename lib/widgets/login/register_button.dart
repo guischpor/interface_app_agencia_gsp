@@ -1,11 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:ui_app_teste/screens/register_screen.dart';
 
-class RegisterButton extends StatelessWidget {
+class RegisterButton extends StatefulWidget {
   String title;
 
   RegisterButton({@required this.title});
 
+  @override
+  _RegisterButtonState createState() => _RegisterButtonState();
+}
+
+class _RegisterButtonState extends State<RegisterButton> {
   @override
   Widget build(BuildContext context) {
     return FlatButton(
@@ -18,7 +23,7 @@ class RegisterButton extends StatelessWidget {
       },
       textColor: Colors.white,
       child: Text(
-        title,
+        widget.title,
         style: TextStyle(letterSpacing: 0.8),
       ),
     );

@@ -51,7 +51,7 @@ class _BuildSigInButtonState extends State<BuildSigInButton> {
                 : Text(
                     widget.title,
                   ),
-            //color: style.colorButtonSignInUpOrange,
+            //color: Colors.grey,
             color: Theme.of(context).primaryColor,
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(
